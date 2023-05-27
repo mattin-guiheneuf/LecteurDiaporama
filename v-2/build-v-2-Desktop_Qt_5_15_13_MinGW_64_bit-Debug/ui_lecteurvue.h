@@ -30,19 +30,21 @@ QT_BEGIN_NAMESPACE
 class Ui_lecteurvue
 {
 public:
-    QAction *actionChanger_Diaporama;
-    QAction *actionVitesse_de_d_filement;
+    QAction *actionCharger_Diaporama;
+    QAction *actionVitesse_de_defilement;
     QAction *actionEnlever_Diaporama;
     QAction *actionQuitter;
     QAction *actionA_propos_de;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QGridLayout *gLayoutInfoImageDiapo;
-    QHBoxLayout *hLayoutTitreDiapo;
+    QHBoxLayout *hLayoutRang;
     QSpacerItem *horizontalSpacer_5;
     QLabel *lRang;
+    QLabel *lSlash;
+    QLabel *lTotalImage;
     QSpacerItem *horizontalSpacer_8;
-    QHBoxLayout *horizontalLayout_10;
+    QHBoxLayout *hLayoutTitreDiapo_2;
     QSpacerItem *horizontalSpacer;
     QLabel *lTitreDiapo;
     QSpacerItem *horizontalSpacer_2;
@@ -53,7 +55,6 @@ public:
     QSpacerItem *horizontalSpacer_6;
     QSpacerItem *horizontalSpacer_7;
     QLabel *lImage;
-    QSpacerItem *verticalSpacer;
     QHBoxLayout *hLayoutMenuInter;
     QHBoxLayout *hLayoutChangerImage;
     QPushButton *bReculer;
@@ -66,7 +67,7 @@ public:
     QCheckBox *cbPersonne;
     QCheckBox *cbAnimal;
     QLabel *lFiltrage;
-    QCheckBox *cbChose;
+    QCheckBox *cbObjet;
     QMenuBar *menubar;
     QMenu *menuFichier;
     QMenu *menuParam_tres;
@@ -77,11 +78,11 @@ public:
     {
         if (lecteurvue->objectName().isEmpty())
             lecteurvue->setObjectName(QString::fromUtf8("lecteurvue"));
-        lecteurvue->resize(1262, 710);
-        actionChanger_Diaporama = new QAction(lecteurvue);
-        actionChanger_Diaporama->setObjectName(QString::fromUtf8("actionChanger_Diaporama"));
-        actionVitesse_de_d_filement = new QAction(lecteurvue);
-        actionVitesse_de_d_filement->setObjectName(QString::fromUtf8("actionVitesse_de_d_filement"));
+        lecteurvue->resize(883, 508);
+        actionCharger_Diaporama = new QAction(lecteurvue);
+        actionCharger_Diaporama->setObjectName(QString::fromUtf8("actionCharger_Diaporama"));
+        actionVitesse_de_defilement = new QAction(lecteurvue);
+        actionVitesse_de_defilement->setObjectName(QString::fromUtf8("actionVitesse_de_defilement"));
         actionEnlever_Diaporama = new QAction(lecteurvue);
         actionEnlever_Diaporama->setObjectName(QString::fromUtf8("actionEnlever_Diaporama"));
         actionQuitter = new QAction(lecteurvue);
@@ -94,41 +95,51 @@ public:
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         gLayoutInfoImageDiapo = new QGridLayout();
         gLayoutInfoImageDiapo->setObjectName(QString::fromUtf8("gLayoutInfoImageDiapo"));
-        hLayoutTitreDiapo = new QHBoxLayout();
-        hLayoutTitreDiapo->setObjectName(QString::fromUtf8("hLayoutTitreDiapo"));
+        hLayoutRang = new QHBoxLayout();
+        hLayoutRang->setObjectName(QString::fromUtf8("hLayoutRang"));
         horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        hLayoutTitreDiapo->addItem(horizontalSpacer_5);
+        hLayoutRang->addItem(horizontalSpacer_5);
 
         lRang = new QLabel(centralwidget);
         lRang->setObjectName(QString::fromUtf8("lRang"));
 
-        hLayoutTitreDiapo->addWidget(lRang);
+        hLayoutRang->addWidget(lRang);
+
+        lSlash = new QLabel(centralwidget);
+        lSlash->setObjectName(QString::fromUtf8("lSlash"));
+
+        hLayoutRang->addWidget(lSlash);
+
+        lTotalImage = new QLabel(centralwidget);
+        lTotalImage->setObjectName(QString::fromUtf8("lTotalImage"));
+
+        hLayoutRang->addWidget(lTotalImage);
 
         horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        hLayoutTitreDiapo->addItem(horizontalSpacer_8);
+        hLayoutRang->addItem(horizontalSpacer_8);
 
 
-        gLayoutInfoImageDiapo->addLayout(hLayoutTitreDiapo, 3, 1, 1, 1);
+        gLayoutInfoImageDiapo->addLayout(hLayoutRang, 3, 1, 1, 1);
 
-        horizontalLayout_10 = new QHBoxLayout();
-        horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
+        hLayoutTitreDiapo_2 = new QHBoxLayout();
+        hLayoutTitreDiapo_2->setObjectName(QString::fromUtf8("hLayoutTitreDiapo_2"));
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_10->addItem(horizontalSpacer);
+        hLayoutTitreDiapo_2->addItem(horizontalSpacer);
 
         lTitreDiapo = new QLabel(centralwidget);
         lTitreDiapo->setObjectName(QString::fromUtf8("lTitreDiapo"));
 
-        horizontalLayout_10->addWidget(lTitreDiapo);
+        hLayoutTitreDiapo_2->addWidget(lTitreDiapo);
 
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_10->addItem(horizontalSpacer_2);
+        hLayoutTitreDiapo_2->addItem(horizontalSpacer_2);
 
 
-        gLayoutInfoImageDiapo->addLayout(horizontalLayout_10, 0, 1, 1, 1);
+        gLayoutInfoImageDiapo->addLayout(hLayoutTitreDiapo_2, 0, 1, 1, 1);
 
         hLayoutTitreImage = new QHBoxLayout();
         hLayoutTitreImage->setObjectName(QString::fromUtf8("hLayoutTitreImage"));
@@ -166,10 +177,6 @@ public:
 
 
         verticalLayout->addLayout(gLayoutInfoImageDiapo);
-
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer);
 
         hLayoutMenuInter = new QHBoxLayout();
         hLayoutMenuInter->setObjectName(QString::fromUtf8("hLayoutMenuInter"));
@@ -225,10 +232,10 @@ public:
 
         hLayoutFiltrage->addWidget(lFiltrage, 1, 0, 1, 1);
 
-        cbChose = new QCheckBox(centralwidget);
-        cbChose->setObjectName(QString::fromUtf8("cbChose"));
+        cbObjet = new QCheckBox(centralwidget);
+        cbObjet->setObjectName(QString::fromUtf8("cbObjet"));
 
-        hLayoutFiltrage->addWidget(cbChose, 2, 2, 1, 1);
+        hLayoutFiltrage->addWidget(cbObjet, 2, 2, 1, 1);
 
 
         hLayoutMenuInter->addLayout(hLayoutFiltrage);
@@ -240,7 +247,7 @@ public:
         lecteurvue->setCentralWidget(centralwidget);
         menubar = new QMenuBar(lecteurvue);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1262, 26));
+        menubar->setGeometry(QRect(0, 0, 883, 26));
         menuFichier = new QMenu(menubar);
         menuFichier->setObjectName(QString::fromUtf8("menuFichier"));
         menuParam_tres = new QMenu(menubar);
@@ -256,13 +263,12 @@ public:
         menubar->addAction(menuParam_tres->menuAction());
         menubar->addAction(menuA_propos_de->menuAction());
         menuFichier->addAction(actionQuitter);
-        menuParam_tres->addAction(actionChanger_Diaporama);
-        menuParam_tres->addAction(actionVitesse_de_d_filement);
+        menuParam_tres->addAction(actionCharger_Diaporama);
+        menuParam_tres->addAction(actionVitesse_de_defilement);
         menuParam_tres->addAction(actionEnlever_Diaporama);
         menuA_propos_de->addAction(actionA_propos_de);
 
         retranslateUi(lecteurvue);
-        QObject::connect(actionQuitter, SIGNAL(triggered()), lecteurvue, SLOT(close()));
 
         QMetaObject::connectSlotsByName(lecteurvue);
     } // setupUi
@@ -270,12 +276,14 @@ public:
     void retranslateUi(QMainWindow *lecteurvue)
     {
         lecteurvue->setWindowTitle(QCoreApplication::translate("lecteurvue", "lecteurvue", nullptr));
-        actionChanger_Diaporama->setText(QCoreApplication::translate("lecteurvue", "Changer Diaporama", nullptr));
-        actionVitesse_de_d_filement->setText(QCoreApplication::translate("lecteurvue", "Vitesse de d\303\251filement", nullptr));
+        actionCharger_Diaporama->setText(QCoreApplication::translate("lecteurvue", "Charger Diaporama", nullptr));
+        actionVitesse_de_defilement->setText(QCoreApplication::translate("lecteurvue", "Vitesse de d\303\251filement", nullptr));
         actionEnlever_Diaporama->setText(QCoreApplication::translate("lecteurvue", "Enlever Diaporama", nullptr));
         actionQuitter->setText(QCoreApplication::translate("lecteurvue", "Quitter", nullptr));
         actionA_propos_de->setText(QCoreApplication::translate("lecteurvue", "A propos de ...", nullptr));
         lRang->setText(QCoreApplication::translate("lecteurvue", "Rang", nullptr));
+        lSlash->setText(QCoreApplication::translate("lecteurvue", "/", nullptr));
+        lTotalImage->setText(QCoreApplication::translate("lecteurvue", "nbTotalImages", nullptr));
         lTitreDiapo->setText(QCoreApplication::translate("lecteurvue", "Titre Diapo", nullptr));
         lTitreImage->setText(QCoreApplication::translate("lecteurvue", "Titre Image", nullptr));
         lImage->setText(QString());
@@ -287,7 +295,7 @@ public:
         cbPersonne->setText(QCoreApplication::translate("lecteurvue", "Personnes", nullptr));
         cbAnimal->setText(QCoreApplication::translate("lecteurvue", "Animaux", nullptr));
         lFiltrage->setText(QCoreApplication::translate("lecteurvue", "Filtrer par :", nullptr));
-        cbChose->setText(QCoreApplication::translate("lecteurvue", "Choses", nullptr));
+        cbObjet->setText(QCoreApplication::translate("lecteurvue", "Objets", nullptr));
         menuFichier->setTitle(QCoreApplication::translate("lecteurvue", "Fichier", nullptr));
         menuParam_tres->setTitle(QCoreApplication::translate("lecteurvue", "Param\303\250tres", nullptr));
         menuA_propos_de->setTitle(QCoreApplication::translate("lecteurvue", "Aide", nullptr));

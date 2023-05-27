@@ -36,13 +36,13 @@ void Lecteur::chargerDiaporama()
        Dans une version ultérieure, ces données proviendront d'une base de données,
        et correspondront au diaporama choisi */
     Image* imageACharger;
-    imageACharger = new Image(3, "personne", "Blanche Neige", "C:\\cartesDisney\\carteDisney2.gif");
+    imageACharger = new Image(3, "personne", "Blanche Neige", ":/lecteurDiapo/cartesDisney/Disney_4.gif");
     _diaporama.push_back(imageACharger);
-    imageACharger = new Image(2, "personne", "Cendrillon", "C:\\cartesDisney\\carteDisney4.gif");
+    imageACharger = new Image(2, "personne", "Cendrillon", ":/lecteurDiapo/cartesDisney/Disney_21.gif");
     _diaporama.push_back(imageACharger);
-    imageACharger = new Image(4, "animal", "Mickey", "C:\\cartesDisney\\carteDisney1.gif");
+    imageACharger = new Image(4, "animal", "Mickey", ":/lecteurDiapo/cartesDisney/Disney_19.gif");
     _diaporama.push_back(imageACharger);
-    imageACharger = new Image(1, "personne", "Grincheux", "C:\\cartesDisney\\carteDisney1.gif");
+    imageACharger = new Image(1, "animal", "Pluto", ":/lecteurDiapo/cartesDisney/Disney_30.gif");
     _diaporama.push_back(imageACharger);
 
 

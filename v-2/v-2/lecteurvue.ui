@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1262</width>
-    <height>710</height>
+    <width>883</width>
+    <height>508</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>lecteurvue</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0,0">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0">
     <item>
      <layout class="QGridLayout" name="gLayoutInfoImageDiapo">
       <item row="3" column="1">
-       <layout class="QHBoxLayout" name="hLayoutTitreDiapo">
+       <layout class="QHBoxLayout" name="hLayoutRang">
         <item>
          <spacer name="horizontalSpacer_5">
           <property name="orientation">
@@ -40,6 +40,20 @@
          </widget>
         </item>
         <item>
+         <widget class="QLabel" name="lSlash">
+          <property name="text">
+           <string>/</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lTotalImage">
+          <property name="text">
+           <string>nbTotalImages</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <spacer name="horizontalSpacer_8">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
@@ -55,7 +69,7 @@
        </layout>
       </item>
       <item row="0" column="1">
-       <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <layout class="QHBoxLayout" name="hLayoutTitreDiapo_2">
         <item>
          <spacer name="horizontalSpacer">
           <property name="orientation">
@@ -173,19 +187,6 @@
      </layout>
     </item>
     <item>
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>40</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item>
      <layout class="QHBoxLayout" name="hLayoutMenuInter">
       <item>
        <layout class="QHBoxLayout" name="hLayoutChangerImage">
@@ -254,9 +255,9 @@
          </widget>
         </item>
         <item row="2" column="2">
-         <widget class="QCheckBox" name="cbChose">
+         <widget class="QCheckBox" name="cbObjet">
           <property name="text">
-           <string>Choses</string>
+           <string>Objets</string>
           </property>
          </widget>
         </item>
@@ -271,7 +272,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1262</width>
+     <width>883</width>
      <height>26</height>
     </rect>
    </property>
@@ -285,8 +286,8 @@
     <property name="title">
      <string>Paramètres</string>
     </property>
-    <addaction name="actionChanger_Diaporama"/>
-    <addaction name="actionVitesse_de_d_filement"/>
+    <addaction name="actionCharger_Diaporama"/>
+    <addaction name="actionVitesse_de_defilement"/>
     <addaction name="actionEnlever_Diaporama"/>
    </widget>
    <widget class="QMenu" name="menuA_propos_de">
@@ -300,12 +301,12 @@
    <addaction name="menuA_propos_de"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionChanger_Diaporama">
+  <action name="actionCharger_Diaporama">
    <property name="text">
-    <string>Changer Diaporama</string>
+    <string>Charger Diaporama</string>
    </property>
   </action>
-  <action name="actionVitesse_de_d_filement">
+  <action name="actionVitesse_de_defilement">
    <property name="text">
     <string>Vitesse de défilement</string>
    </property>
@@ -329,22 +330,5 @@
  <resources>
   <include location="imagesDiapo.qrc"/>
  </resources>
- <connections>
-  <connection>
-   <sender>actionQuitter</sender>
-   <signal>triggered()</signal>
-   <receiver>lecteurvue</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>630</x>
-     <y>354</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

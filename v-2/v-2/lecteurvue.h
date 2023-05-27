@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include "lecteur.h"
-#include "aproposde.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -21,15 +20,25 @@ public:
 
 private:
     Ui::lecteurvue *ui;
-    Lecteur monLecteur;
-    aProposDe *dlgAProposDe;
+    Lecteur* monLecteur = new Lecteur();
+
+private :
+    QString titreImg;
+    QString rangImg;
+    QString cheminImg;
+    QString nbrImage;
 
 public slots :
     void avancer();
     void reculer();
+    void majImage();
     void lancerDiapo();
     void arreterDiapo();
     void filtrerImages();
+
+    void chargerDiapo();
+    void changerVitesseDiapo();
+    void enleverDiapo();
     void afficherAProposDe();
 };
 
