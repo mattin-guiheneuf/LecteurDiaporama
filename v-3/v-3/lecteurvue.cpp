@@ -181,7 +181,7 @@ void lecteurvue::enleverDiapo()
 
 void lecteurvue::afficherAProposDe()
 {
-    QMessageBox::information(this, "A propos de ", "Version : 2\n"
+    QMessageBox::information(this, "A propos de ", "Version : 3\n"
                                                    "Date de Création : 07/05/2023\n"
                                                    "Auteurs : Axel Ambroise\n"
                                                    "          Mattin Guiheneuf\n"
