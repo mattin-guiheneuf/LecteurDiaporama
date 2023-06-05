@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="diagramme etats" version="4">
+  <OBJECT>
+    <ID name="diagramme etats" mc="Standard.Package" uid="2fbf1f5b-a608-460e-a57a-ebc584f24dee"/>
+    <PID name="Diagramme Etats" mc="Standard.Project" uid="7efdeef6-bef4-44ef-8468-adce046634ac"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[diagramme etats]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="State Machine" mc="Standard.StateMachine" uid="571cdb22-05ff-48af-ac14-8d5349de4344"/>
+        <COMPID name="State Machine" mc="Standard.StateMachine" uid="99557f73-79a4-45d2-bac7-9752f075c7df"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
