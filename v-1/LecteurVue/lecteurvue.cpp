@@ -41,7 +41,7 @@ void lecteurvue::arreterDiapo()
 
 void lecteurvue::filtrerImages()
 {
-    qDebug() << "L'utilisateur flitre les images";
+    qDebug() << "L'utilisateur filtre les images";
 }
 
 lecteurvue::~lecteurvue()
