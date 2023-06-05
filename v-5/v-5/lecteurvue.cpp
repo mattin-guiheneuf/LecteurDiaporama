@@ -20,7 +20,7 @@ lecteurvue::lecteurvue(QWidget *parent)
     connect(ui->bReculer, SIGNAL(clicked()), this, SLOT(reculer()));
     connect(ui->bLancerDiapo, SIGNAL(clicked()), this, SLOT(lancerDiapo()));
     connect(ui->bArreterDiapo, SIGNAL(clicked()), this, SLOT(arreterDiapo()));
-    connect(ui->cbPersonne, SIGNAL(clicked(bool)), this, SLOT(filtrerImages()));
+    connect(ui->cbPersonnage, SIGNAL(clicked(bool)), this, SLOT(filtrerImages()));
     connect(ui->cbAnimal, SIGNAL(clicked(bool)), this, SLOT(filtrerImages()));
     connect(ui->cbObjet, SIGNAL(clicked(bool)), this, SLOT(filtrerImages()));
 
@@ -38,7 +38,7 @@ lecteurvue::lecteurvue(QWidget *parent)
         ui->bReculer->setEnabled(false);
         ui->cbAnimal->setEnabled(false);
         ui->cbObjet->setEnabled(false);
-        ui->cbPersonne->setEnabled(false);
+        ui->cbPersonnage->setEnabled(false);
         ui->bLancerDiapo->setEnabled(false);
         ui->bArreterDiapo->setEnabled(false);
 
@@ -170,7 +170,7 @@ void lecteurvue::chargerDiapo()
     ui->bReculer->setEnabled(true);
     ui->cbAnimal->setEnabled(true);
     ui->cbObjet->setEnabled(true);
-    ui->cbPersonne->setEnabled(true);
+    ui->cbPersonnage->setEnabled(true);
     ui->bLancerDiapo->setEnabled(true);
 
     ui->actionVitesse_de_defilement->setEnabled(true);
@@ -218,7 +218,7 @@ void lecteurvue::enleverDiapo()
     ui->bReculer->setEnabled(false);
     ui->cbAnimal->setEnabled(false);
     ui->cbObjet->setEnabled(false);
-    ui->cbPersonne->setEnabled(false);
+    ui->cbPersonnage->setEnabled(false);
     ui->bLancerDiapo->setEnabled(false);
 
     ui->lTitreImage->setVisible(false);

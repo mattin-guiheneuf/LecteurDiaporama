@@ -13,6 +13,9 @@ bool database::openDatabase()
 {
     mydb = QSqlDatabase::addDatabase(CONNECT_TYPE);
     mydb.setDatabaseName(DATABASE_NAME);
+    mydb.setUserName("mguiheneuf_bd");
+    mydb.setPassword("mguiheneuf_bd");
+
     if(mydb.open())
     {
         return true;

@@ -1,4 +1,5 @@
 #include "lecteur.h"
+#include <QSqlQuery>
 
 Lecteur::Lecteur()
 {
@@ -38,23 +39,22 @@ void Lecteur::chargerDiaporama()
     Image* imageACharger;
 
     mydb = new database;
-    QSqlQuery query = ("SELECT DdD.rang, F.nomFamille, Dp.titrePhoto, Dp.uriPhoto"
-                       "FROM Diapos Dp"
-                       "JOIN DiaposDansDiaporama DdD ON Dp.idphoto = DdD.idDiapo"
-                       "JOIN Famille F");
+    mydb->openDatabase();
 
-    if(mydb->openDatabase())
+    QSqlQuery query;
+    QString laRequete("SELECT Dp.idphoto, F.nomFamille, Dp.titrePhoto, Dp.uriPhoto "
+                      "FROM Diapos Dp "
+                      "JOIN Familles F ON Dp.idFam = F.idFamille ");
+
+    if (query.exec(laRequete))
     {
-        if (query.exec())
+        for(int i = 0; query.next(); i++)
         {
-            for(int i = 0; query.next(); i++)
-            {
-                imageACharger = new Image(query.value(0).toInt(),
-                                          query.value(1).toStdString(),
-                                          query.value(2).toStdString(),
-                                          query.value(3).toStdString());
-                _diaporama.push_back(imageACharger);
-            }
+            imageACharger = new Image(query.value(0).toInt(),
+                                      query.value(1).toString().toStdString(),
+                                      query.value(2).toString().toStdString(),
+                                      ":/lecteurDiapo" + query.value(3).toString().toStdString());
+            _diaporama.push_back(imageACharger);
         }
     }
 
@@ -96,7 +96,6 @@ void Lecteur::viderDiaporama()
      _posImageCourante = 0;
     }
     cout << nbImages() << " images restantes dans le diaporama." << endl;
-
 }
 
 void Lecteur::afficher()
