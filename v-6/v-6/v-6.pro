@@ -11,7 +11,6 @@ CONFIG += c++17
 SOURCES += \
     database.cpp \
     diaporama.cpp \
-    diaporama1.cpp \
     image.cpp \
     lecteur.cpp \
     main.cpp \
@@ -20,13 +19,12 @@ SOURCES += \
 HEADERS += \
     database.h \
     diaporama.h \
-    diaporama1.h \
     image.h \
     lecteur.h \
     lecteurvue.h
 
 FORMS += \
-    diaporama1.ui \
+    diaporama.ui \
     lecteurvue.ui
 
 # Default rules for deployment.
