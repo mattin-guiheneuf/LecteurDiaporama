@@ -148,18 +148,10 @@ void lecteurvue::arreterDiapo()
 
 void lecteurvue::filtrerImages()
 {
-    qDebug() << "L'utlisateur filtre les images";
-    /*
-    if (etat){
-        qDebug() << "L'utilisateur flitre les images par Animaux";
-    }
-    else if (etat){
-        qDebug() << "L'utilisateur flitre les images par Objets";
-    }
-    else{
-        qDebug() << "L'utilisateur flitre les images par Personnes";
-    }
-    */
+    // qDebug() << "L'utlisateur filtre les images";
+
+    for(int i = 0;
+
 }
 
 void lecteurvue::chargerDiapo()

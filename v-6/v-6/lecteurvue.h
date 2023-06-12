@@ -35,6 +35,8 @@ private :
     QLabel *valModeActuel;
     QLabel *vitesseActuelle;
     QLabel *valVitesseActuelle;
+    enum etatFiltre {pasDeFiltre, pers, anim, obj,
+                      persAnim, persObj, animObj, toutFiltres};
 
 public slots :
     void avancer();
