@@ -11,6 +11,9 @@ class database
 public:
     database();
     bool openDatabase();
+    void tableDiapo();
+    void choixDiapo();
+    void chargementImages();
     void closeDatabase();
 
 private :

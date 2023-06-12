@@ -6,12 +6,12 @@ class diaporama
 public:
     diaporama();
     unsigned int getIdDiaporama();
-    string getTitreDiaporama();
+    QString getTitreDiaporama();
     unsigned int getVitesseDeDefilement();
 
 private :
     unsigned int _idDiaporama;
-    string _titreDiaporama;
+    QString _titreDiaporama;
     unsigned int _vitesseDeDefilement;
 };
 

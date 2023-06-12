@@ -27,6 +27,40 @@ bool database::openDatabase()
     }
 }
 
+void database::tableDiapo()
+{
+    if(!this->openDatabase())
+    {
+        this->openDatabase();
+    }
+
+    QSqlQuery query;
+    query.prepare("SELECT idDiaporama, titreDiaporama FROM Diaporamas;");
+
+    if(!query.exec())
+    {
+        qDebug() << "Problème requête table";
+    }
+    else
+    {
+        for(int i = 0; query.next(); i++)
+        {
+
+        }
+    }
+}
+
+
+void database::choixDiapo()
+{
+
+}
+
+void database::chargementImages()
+{
+
+}
+
 void database::closeDatabase()
 {
     mydb.close();
