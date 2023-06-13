@@ -1,0 +1,4 @@
+Ceci est la dernière version fonctionnelle du groupe. La version 6 et 7-MVP ont été avancées ou évoquées
+mais ne peuvent pas être considérées comme fonctionnelles.
+
+Si besoin, le lien vers le dépôt GitHub : https://github.com/mattin-guiheneuf/LecteurDiaporama
