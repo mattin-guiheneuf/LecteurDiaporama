@@ -148,10 +148,7 @@ void lecteurvue::arreterDiapo()
 
 void lecteurvue::filtrerImages()
 {
-    // qDebug() << "L'utlisateur filtre les images";
-
-    for(int i = 0;
-
+    qDebug() << "L'utlisateur filtre les images" ;
 }
 
 void lecteurvue::chargerDiapo()

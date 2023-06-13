@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QtWidgets>
 #include "lecteur.h"
+#include "diaporama.h"
 
 
 QT_BEGIN_NAMESPACE
