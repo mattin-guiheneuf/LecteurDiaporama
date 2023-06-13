@@ -16,6 +16,11 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="lTitreChoixDiapo">
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
      <property name="text">
       <string>TextLabel</string>
      </property>
@@ -25,7 +30,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QTableWidget" name="tbwDiapo"/>
+    <widget class="QTableWidget" name="tbwChoixDiapo"/>
    </item>
    <item>
     <layout class="QHBoxLayout" name="hLayoutBoutDiapo">
@@ -43,9 +48,29 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="bChoixDiapo">
+      <widget class="QPushButton" name="bAnnuler">
        <property name="text">
-        <string>PushButton</string>
+        <string>Annuler</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bChoisir">
+       <property name="text">
+        <string>Choisir</string>
        </property>
       </widget>
      </item>
