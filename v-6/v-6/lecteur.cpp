@@ -42,11 +42,14 @@ void Lecteur::chargerDiaporama()
     mydb->openDatabase();
 
     QSqlQuery query;
-    QString laRequete("SELECT Dp.idphoto, F.nomFamille, Dp.titrePhoto, Dp.uriPhoto "
-                      "FROM Diapos Dp "
-                      "JOIN Familles F ON Dp.idFam = F.idFamille ");
+    query.prepare("SELECT DdD.rang, F.nomFamille, Dp.titrePhoto, Dp.uriPhoto "
+                  "FROM Diapos Dp "
+                  "JOIN DiaposDansDiaporama DdD ON Dp.idphoto = DdD.idDiapo"
+                  "JOIN Familles F ON Dp.idFam = F.idFamille "
+                  "WHERE DdD.idDiaporama = ?");
+    query.addBindValue();
 
-    if (query.exec(laRequete))
+    if(query.exec())
     {
         for(int i = 0; query.next(); i++)
         {
