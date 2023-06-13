@@ -1,2 +1,0 @@
-Le dossier avec les images doit être déposé dans le dossier de la version souhaité, dans le même répertoire que les fichiers .cpp, .h et .ui.
-Actuellement, une ressource est utilisée pour l'accès aux images. Le chemin d'accès est : ":/lecteurDiapo" + le chemin contenu dans la base de données. 
